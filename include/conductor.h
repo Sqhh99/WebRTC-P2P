@@ -29,10 +29,6 @@
 #include "examples/peerconnection/client/peer_connection_client.h"
 #include "rtc_base/thread.h"
 
-// sqhh99's mark -------------
-#define CLIENT_1 1
-// sqhh99's mark -------------
-
 namespace webrtc {
 class VideoCaptureModule;
 }  // namespace webrtc

@@ -24,6 +24,7 @@ std::string GetEnvVarOrDefault(const char* env_var_name,
                                const char* default_value);
 std::string GetPeerConnectionString();
 std::string GetDefaultServerName();
+std::string GetPeerNameOriginal();
 std::string GetPeerName();
 
 #endif  // EXAMPLES_PEERCONNECTION_CLIENT_DEFAULTS_H_
