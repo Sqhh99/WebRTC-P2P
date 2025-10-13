@@ -78,12 +78,12 @@ link_directories(
 
 # --- 生成目标 (Windows GUI 应用) ---
 add_executable(peerconnection_client WIN32
-    main.cc
-    conductor.cc
-    defaults.cc
-    main_wnd.cc
-    peer_connection_client.cc
-    test_impl.cc
+    src/main.cc
+    src/conductor.cc
+    src/defaults.cc
+    src/main_wnd.cc
+    src/peer_connection_client.cc
+    src/test_impl.cc
     test/platform_video_capturer.cc
     test/vcm_capturer.cc
     test/test_video_capturer.cc

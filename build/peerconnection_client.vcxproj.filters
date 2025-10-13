@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\main.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\conductor.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\conductor.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\defaults.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\defaults.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\main_wnd.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\main_wnd.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\peer_connection_client.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\peer_connection_client.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test_impl.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\test_impl.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\platform_video_capturer.cc">
