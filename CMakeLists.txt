@@ -1,0 +1,178 @@
+# CMake 最低版本要求
+cmake_minimum_required(VERSION 3.15)
+
+# 项目名称
+project(peerconnection_client)
+
+# 设置 C++ 标准为 C++20
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# --- 路径配置 ---
+set(WEBRTC_SRC_DIR "D:/webrtc-checkout/src")
+set(WEBRTC_LIB_DIR "${WEBRTC_SRC_DIR}/out/Release/obj")
+set(ABSEIL_INSTALL_DIR "${WEBRTC_SRC_DIR}/third_party/abseil-cpp/build_static/install")
+set(JSONCPP_INSTALL_DIR "${WEBRTC_SRC_DIR}/third_party/jsoncpp/build_static/install")
+
+# --- 检查路径 ---
+if(NOT EXISTS "${WEBRTC_SRC_DIR}")
+    message(FATAL_ERROR "WebRTC source directory not found at: ${WEBRTC_SRC_DIR}")
+endif()
+if(NOT EXISTS "${WEBRTC_LIB_DIR}")
+    message(FATAL_ERROR "WebRTC library directory not found at: ${WEBRTC_LIB_DIR}")
+endif()
+
+set(MAIN_WEBRTC_LIB_PATH "${WEBRTC_LIB_DIR}/webrtc.lib")
+if(NOT EXISTS "${MAIN_WEBRTC_LIB_PATH}")
+    message(FATAL_ERROR "The main library webrtc.lib was not found at: ${MAIN_WEBRTC_LIB_PATH}")
+endif()
+
+# JsonCpp 库
+set(JSONCPP_LIB "${JSONCPP_INSTALL_DIR}/lib/jsoncpp.lib")
+if(NOT EXISTS "${JSONCPP_LIB}")
+    message(FATAL_ERROR "JsonCpp library not found at: ${JSONCPP_LIB}. Please compile it first.")
+endif()
+
+# 强制使用静态运行时库 /MT
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded")
+
+add_definitions(
+    -DWEBRTC_WIN 
+    -DWIN32_LEAN_AND_MEAN 
+    -DNOMINMAX
+    -D_CRT_SECURE_NO_WARNINGS 
+    -D_SCL_SECURE_NO_WARNINGS
+    -DWEBRTC_LITTLE_ENDIAN 
+    -D_WIN32_WINNT=0x0A00 
+    -D_HAS_ITERATOR_DEBUGGING=0
+    -D_ITERATOR_DEBUG_LEVEL=0
+    -DWEBRTC_LIBRARY_IMPL
+    -DWEBRTC_NON_STATIC_TRACE_EVENT_HANDLERS=1
+    -DUNICODE
+    -D_UNICODE
+)
+
+include_directories(SYSTEM 
+    ${WEBRTC_SRC_DIR}
+    "${WEBRTC_SRC_DIR}/third_party/abseil-cpp"
+    "${WEBRTC_SRC_DIR}/third_party/libyuv/include"
+    "${JSONCPP_INSTALL_DIR}/include"
+    "${WEBRTC_SRC_DIR}/api"
+    "${WEBRTC_SRC_DIR}/rtc_base"
+    "${WEBRTC_SRC_DIR}/media"
+    "${WEBRTC_SRC_DIR}/p2p"
+    "${WEBRTC_SRC_DIR}/pc"
+)
+
+link_directories(
+    ${WEBRTC_LIB_DIR}
+    "${ABSEIL_INSTALL_DIR}/lib"
+)
+
+# --- 生成目标 (Windows GUI 应用) ---
+add_executable(peerconnection_client WIN32
+    main.cc
+    conductor.cc
+    # capturer_track_source.cc  # 添加这一行
+    defaults.cc
+    main_wnd.cc
+    peer_connection_client.cc
+)
+
+# 查找并添加 WebRTC 的额外库
+file(GLOB WEBRTC_EXTRA_LIBS 
+    "${WEBRTC_LIB_DIR}/test/test_support.lib"
+    "${WEBRTC_LIB_DIR}/api/test/create_frame_generator.lib"
+    "${WEBRTC_LIB_DIR}/test/frame_generator_capturer.lib"
+    "${WEBRTC_LIB_DIR}/test/video_test_support.lib"
+    "${WEBRTC_LIB_DIR}/rtc_base/rtc_json.lib"
+    "${WEBRTC_LIB_DIR}/api/field_trials.lib"
+)
+
+# Abseil 库
+set(ABSEIL_LIBRARIES
+    absl_flags_parse
+    absl_flags_usage
+    absl_flags_usage_internal
+    absl_flags_config
+    absl_flags_marshalling
+    absl_flags_commandlineflag
+    absl_flags_commandlineflag_internal
+    absl_flags_private_handle_accessor
+    absl_flags_reflection
+    absl_flags_internal
+    absl_flags_program_name
+    absl_log_internal_message
+    absl_log_internal_check_op
+    absl_log_internal_conditions
+    absl_log_internal_log_sink_set
+    absl_log_internal_format
+    absl_log_internal_globals
+    absl_log_globals
+    absl_log_entry
+    absl_log_severity
+    absl_log_sink
+    absl_stacktrace
+    absl_symbolize
+    absl_debugging_internal
+    absl_demangle_internal
+    absl_synchronization
+    absl_graphcycles_internal
+    absl_kernel_timeout_internal
+    absl_time
+    absl_time_zone
+    absl_civil_time
+    absl_strings
+    absl_strings_internal
+    absl_str_format_internal
+    absl_string_view
+    absl_cord
+    absl_cord_internal
+    absl_cordz_functions
+    absl_cordz_handle
+    absl_cordz_info
+    absl_base
+    absl_malloc_internal
+    absl_raw_logging_internal
+    absl_spinlock_wait
+    absl_throw_delegate
+    absl_int128
+    absl_city
+    absl_hash
+    absl_raw_hash_set
+)
+
+# Windows 系统库
+set(SYSTEM_LIBRARIES
+    ws2_32 
+    secur32 
+    winmm 
+    iphlpapi 
+    advapi32 
+    user32 
+    crypt32 
+    dmoguids 
+    msdmo
+    strmiids
+    wmcodecdspuuid
+    comctl32
+    gdi32
+    comdlg32
+    ole32
+    shell32
+)
+
+# 链接所有库
+target_link_libraries(peerconnection_client
+    PRIVATE
+    webrtc
+    ${JSONCPP_LIB}
+    ${WEBRTC_EXTRA_LIBS}
+    ${ABSEIL_LIBRARIES}
+    ${SYSTEM_LIBRARIES}
+)
+
+# 设置链接选项
+set_target_properties(peerconnection_client PROPERTIES
+    LINK_FLAGS "/SUBSYSTEM:WINDOWS"
+)
