@@ -91,7 +91,7 @@ add_executable(peerconnection_client WIN32
     test/frame_generator_capturer.cc
     test/frame_utils.cc
 )
-
+target_include_directories(peerconnection_client PRIVATE "${CMAKE_SOURCE_DIR}/include")
 # WebRTC 的必需库
 file(GLOB WEBRTC_EXTRA_LIBS 
     "${WEBRTC_LIB_DIR}/rtc_base/rtc_json.lib"

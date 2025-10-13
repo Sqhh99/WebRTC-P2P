@@ -473,11 +473,11 @@ void Conductor::StartLogin(const std::string& server, int port) {
     return;
   server_ = server;
   // sqhh99's mark -------------
-  // #if CLIENT_1
+  #if CLIENT_1
     client_->Connect(server, port, "test1");
-  // #else
-  //   client_->Connect(server, port, "test2");
-  // #endif
+  #else
+    client_->Connect(server, port, "test2");
+  #endif
   //client_->Connect(server, port, GetPeerName());
   //  sqhh99's mark -------------
 }

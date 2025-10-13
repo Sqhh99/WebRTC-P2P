@@ -86,6 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -imsvc "D:/webrtc-checkout/src" -imsvc "D:/webrtc-checkout/src/third_party/abseil-cpp" -imsvc "D:/webrtc-checkout/src/third_party/libyuv/include" -imsvc "D:/webrtc-checkout/src/third_party/jsoncpp/build_static/install/include" -imsvc "D:/webrtc-checkout/src/api" -imsvc "D:/webrtc-checkout/src/rtc_base" -imsvc "D:/webrtc-checkout/src/media" -imsvc "D:/webrtc-checkout/src/p2p" -imsvc "D:/webrtc-checkout/src/pc" /Zc:__cplusplus</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -106,10 +107,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;WIN32_LEAN_AND_MEAN;NOMINMAX;WEBRTC_WIN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;WEBRTC_LITTLE_ENDIAN;_WIN32_WINNT=0x0A00;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;WEBRTC_LIBRARY_IMPL;WEBRTC_NON_STATIC_TRACE_EVENT_HANDLERS=1;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -132,6 +133,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -imsvc "D:/webrtc-checkout/src" -imsvc "D:/webrtc-checkout/src/third_party/abseil-cpp" -imsvc "D:/webrtc-checkout/src/third_party/libyuv/include" -imsvc "D:/webrtc-checkout/src/third_party/jsoncpp/build_static/install/include" -imsvc "D:/webrtc-checkout/src/api" -imsvc "D:/webrtc-checkout/src/rtc_base" -imsvc "D:/webrtc-checkout/src/media" -imsvc "D:/webrtc-checkout/src/p2p" -imsvc "D:/webrtc-checkout/src/pc" /Zc:__cplusplus</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -153,10 +155,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;NOMINMAX;WEBRTC_WIN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;WEBRTC_LITTLE_ENDIAN;_WIN32_WINNT=0x0A00;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;WEBRTC_LIBRARY_IMPL;WEBRTC_NON_STATIC_TRACE_EVENT_HANDLERS=1;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -179,6 +181,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -imsvc "D:/webrtc-checkout/src" -imsvc "D:/webrtc-checkout/src/third_party/abseil-cpp" -imsvc "D:/webrtc-checkout/src/third_party/libyuv/include" -imsvc "D:/webrtc-checkout/src/third_party/jsoncpp/build_static/install/include" -imsvc "D:/webrtc-checkout/src/api" -imsvc "D:/webrtc-checkout/src/rtc_base" -imsvc "D:/webrtc-checkout/src/media" -imsvc "D:/webrtc-checkout/src/p2p" -imsvc "D:/webrtc-checkout/src/pc" /Zc:__cplusplus</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -200,10 +203,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;NOMINMAX;WEBRTC_WIN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;WEBRTC_LITTLE_ENDIAN;_WIN32_WINNT=0x0A00;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;WEBRTC_LIBRARY_IMPL;WEBRTC_NON_STATIC_TRACE_EVENT_HANDLERS=1;UNICODE;_UNICODE;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -226,6 +229,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -imsvc "D:/webrtc-checkout/src" -imsvc "D:/webrtc-checkout/src/third_party/abseil-cpp" -imsvc "D:/webrtc-checkout/src/third_party/libyuv/include" -imsvc "D:/webrtc-checkout/src/third_party/jsoncpp/build_static/install/include" -imsvc "D:/webrtc-checkout/src/api" -imsvc "D:/webrtc-checkout/src/rtc_base" -imsvc "D:/webrtc-checkout/src/media" -imsvc "D:/webrtc-checkout/src/p2p" -imsvc "D:/webrtc-checkout/src/pc" /Zc:__cplusplus</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -246,10 +250,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;NOMINMAX;WEBRTC_WIN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;WEBRTC_LITTLE_ENDIAN;_WIN32_WINNT=0x0A00;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;WEBRTC_LIBRARY_IMPL;WEBRTC_NON_STATIC_TRACE_EVENT_HANDLERS=1;UNICODE;_UNICODE;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\workspace\cpp-workspace\peerconnection\client\include;D:\webrtc-checkout\src;D:\webrtc-checkout\src\third_party\abseil-cpp;D:\webrtc-checkout\src\third_party\libyuv\include;D:\webrtc-checkout\src\third_party\jsoncpp\build_static\install\include;D:\webrtc-checkout\src\api;D:\webrtc-checkout\src\rtc_base;D:\webrtc-checkout\src\media;D:\webrtc-checkout\src\p2p;D:\webrtc-checkout\src\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
