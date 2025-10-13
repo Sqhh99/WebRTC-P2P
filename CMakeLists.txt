@@ -27,19 +27,25 @@ if(NOT EXISTS "${MAIN_WEBRTC_LIB_PATH}")
     message(FATAL_ERROR "The main library webrtc.lib was not found at: ${MAIN_WEBRTC_LIB_PATH}")
 endif()
 
-# JsonCpp 库
-set(JSONCPP_LIB "${JSONCPP_INSTALL_DIR}/lib/jsoncpp.lib")
-if(NOT EXISTS "${JSONCPP_LIB}")
-    message(FATAL_ERROR "JsonCpp library not found at: ${JSONCPP_LIB}. Please compile it first.")
+# 检查 JsonCpp 库
+set(JSONCPP_LIB_PATH "${JSONCPP_INSTALL_DIR}/lib/jsoncpp.lib")
+if(NOT EXISTS "${JSONCPP_LIB_PATH}")
+    message(FATAL_ERROR "JsonCpp library not found at: ${JSONCPP_LIB_PATH}")
 endif()
 
 # 强制使用静态运行时库 /MT
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded")
 
+# 编译选项
+add_compile_options(
+    /Zc:__cplusplus  # 启用正确的 __cplusplus 宏
+    /EHsc  # 异常处理
+)
+
 add_definitions(
-    -DWEBRTC_WIN 
     -DWIN32_LEAN_AND_MEAN 
     -DNOMINMAX
+    -DWEBRTC_WIN 
     -D_CRT_SECURE_NO_WARNINGS 
     -D_SCL_SECURE_NO_WARNINGS
     -DWEBRTC_LITTLE_ENDIAN 
@@ -67,24 +73,22 @@ include_directories(SYSTEM
 link_directories(
     ${WEBRTC_LIB_DIR}
     "${ABSEIL_INSTALL_DIR}/lib"
+    "${JSONCPP_INSTALL_DIR}/lib"
 )
 
 # --- 生成目标 (Windows GUI 应用) ---
 add_executable(peerconnection_client WIN32
     main.cc
     conductor.cc
-    # capturer_track_source.cc  # 添加这一行
+    capturer_track_source.cc
     defaults.cc
     main_wnd.cc
     peer_connection_client.cc
+    test_video_capturer.cc
 )
 
-# 查找并添加 WebRTC 的额外库
+# WebRTC 的必需库
 file(GLOB WEBRTC_EXTRA_LIBS 
-    "${WEBRTC_LIB_DIR}/test/test_support.lib"
-    "${WEBRTC_LIB_DIR}/api/test/create_frame_generator.lib"
-    "${WEBRTC_LIB_DIR}/test/frame_generator_capturer.lib"
-    "${WEBRTC_LIB_DIR}/test/video_test_support.lib"
     "${WEBRTC_LIB_DIR}/rtc_base/rtc_json.lib"
     "${WEBRTC_LIB_DIR}/api/field_trials.lib"
 )
@@ -166,7 +170,7 @@ set(SYSTEM_LIBRARIES
 target_link_libraries(peerconnection_client
     PRIVATE
     webrtc
-    ${JSONCPP_LIB}
+    jsoncpp
     ${WEBRTC_EXTRA_LIBS}
     ${ABSEIL_LIBRARIES}
     ${SYSTEM_LIBRARIES}

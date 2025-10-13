@@ -24,7 +24,7 @@ events:
       The output was:
       0
       閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
-      鐢熸垚鍚姩鏃堕棿涓?2025-10-13 12:39:46銆?
+      鐢熸垚鍚姩鏃堕棿涓?2025-10-13 14:10:08銆?
       
       鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\4.0.3\\CompilerIdC\\CompilerIdC.vcxproj鈥?榛樿鐩爣)銆?
       PrepareForBuild:
@@ -61,7 +61,7 @@ events:
           0 涓鍛?
           0 涓敊璇?
       
-      宸茬敤鏃堕棿 00:00:01.02
+      宸茬敤鏃堕棿 00:00:00.96
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -87,7 +87,7 @@ events:
       The output was:
       0
       閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
-      鐢熸垚鍚姩鏃堕棿涓?2025-10-13 12:39:47銆?
+      鐢熸垚鍚姩鏃堕棿涓?2025-10-13 14:10:09銆?
       
       鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)銆?
       PrepareForBuild:
@@ -143,8 +143,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-4n64dt"
-      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-4n64dt"
+      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-zral5e"
+      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-zral5e"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/Llvm/x64/bin/clang-scan-deps.exe"
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
@@ -154,45 +154,45 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-4n64dt'
+        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-zral5e'
         
-        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2e548.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9dfeb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
-        鐢熸垚鍚姩鏃堕棿涓?2025-10-13 12:39:48銆?
+        鐢熸垚鍚姩鏃堕棿涓?2025-10-13 14:10:11銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4n64dt\\cmTC_2e548.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zral5e\\cmTC_9dfeb.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_2e548.dir\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_9dfeb.dir\\Debug\\鈥濄€?
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4n64dt\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_2e548.dir\\Debug\\cmTC_2e548.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zral5e\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_9dfeb.dir\\Debug\\cmTC_9dfeb.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_2e548.dir\\Debug\\cmTC_2e548.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_2e548.dir\\Debug\\cmTC_2e548.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_9dfeb.dir\\Debug\\cmTC_9dfeb.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_9dfeb.dir\\Debug\\cmTC_9dfeb.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Fo"cmTC_2e548.dir\\Debug\\\\" /Gd /TC --target=amd64-pc-windows-msvc  "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Fo"cmTC_9dfeb.dir\\Debug\\\\" /Gd /TC --target=amd64-pc-windows-msvc  "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
         Link:
-          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4n64dt\\Debug\\cmTC_2e548.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-4n64dt/Debug/cmTC_2e548.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-4n64dt/Debug/cmTC_2e548.lib"   /machine:x64 cmTC_2e548.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_2e548.vcxproj -> D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4n64dt\\Debug\\cmTC_2e548.exe
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zral5e\\Debug\\cmTC_9dfeb.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-zral5e/Debug/cmTC_9dfeb.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-zral5e/Debug/cmTC_9dfeb.lib"   /machine:x64 cmTC_9dfeb.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_9dfeb.vcxproj -> D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zral5e\\Debug\\cmTC_9dfeb.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4n64dt\\Debug\\cmTC_2e548.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_2e548.dir\\Debug\\cmTC_2e548.tlog\\cmTC_2e548.write.1u.tlog" "cmTC_2e548.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zral5e\\Debug\\cmTC_9dfeb.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_9dfeb.dir\\Debug\\cmTC_9dfeb.tlog\\cmTC_9dfeb.write.1u.tlog" "cmTC_9dfeb.dir\\Debug\\vcpkg.applocal.log"
           'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
           鎴栨壒澶勭悊鏂囦欢銆?
-          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4n64dt\\Debug\\cmTC_2e548.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_2e548.dir\\Debug\\cmTC_2e548.tlog\\cmTC_2e548.write.1u.tlog" "cmTC_2e548.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4n64dt\\Debug\\cmTC_2e548.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_2e548.dir\\Debug\\cmTC_2e548.tlog\\cmTC_2e548.write.1u.tlog" "cmTC_2e548.dir\\Debug\\vcpkg.applocal.log"
+          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zral5e\\Debug\\cmTC_9dfeb.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_9dfeb.dir\\Debug\\cmTC_9dfeb.tlog\\cmTC_9dfeb.write.1u.tlog" "cmTC_9dfeb.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zral5e\\Debug\\cmTC_9dfeb.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_9dfeb.dir\\Debug\\cmTC_9dfeb.tlog\\cmTC_9dfeb.write.1u.tlog" "cmTC_9dfeb.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_2e548.dir\\Debug\\cmTC_2e548.tlog\\unsuccessfulbuild鈥濄€?
-          姝ｅ湪瀵光€渃mTC_2e548.dir\\Debug\\cmTC_2e548.tlog\\cmTC_2e548.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4n64dt\\cmTC_2e548.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_9dfeb.dir\\Debug\\cmTC_9dfeb.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_9dfeb.dir\\Debug\\cmTC_9dfeb.tlog\\cmTC_9dfeb.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zral5e\\cmTC_9dfeb.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
         
         宸叉垚鍔熺敓鎴愩€?
             0 涓鍛?
             0 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.95
+        宸茬敤鏃堕棿 00:00:00.96
         
       exitCode: 0
   -
@@ -253,8 +253,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-a4c13p"
-      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-a4c13p"
+      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-dejd83"
+      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-dejd83"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/Llvm/x64/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
@@ -265,45 +265,45 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-a4c13p'
+        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-dejd83'
         
-        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_82b94.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3cf9d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
-        鐢熸垚鍚姩鏃堕棿涓?2025-10-13 12:39:50銆?
+        鐢熸垚鍚姩鏃堕棿涓?2025-10-13 14:10:12銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4c13p\\cmTC_82b94.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dejd83\\cmTC_3cf9d.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_82b94.dir\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_3cf9d.dir\\Debug\\鈥濄€?
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4c13p\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_82b94.dir\\Debug\\cmTC_82b94.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dejd83\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_3cf9d.dir\\Debug\\cmTC_3cf9d.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_82b94.dir\\Debug\\cmTC_82b94.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_82b94.dir\\Debug\\cmTC_82b94.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_3cf9d.dir\\Debug\\cmTC_3cf9d.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_3cf9d.dir\\Debug\\cmTC_3cf9d.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /MDd /GS /fp:precise /GR /Fo"cmTC_82b94.dir\\Debug\\\\" /Gd /TP --target=amd64-pc-windows-msvc  "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /MDd /GS /fp:precise /GR /Fo"cmTC_3cf9d.dir\\Debug\\\\" /Gd /TP --target=amd64-pc-windows-msvc  "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4c13p\\Debug\\cmTC_82b94.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-a4c13p/Debug/cmTC_82b94.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-a4c13p/Debug/cmTC_82b94.lib"   /machine:x64 cmTC_82b94.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_82b94.vcxproj -> D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4c13p\\Debug\\cmTC_82b94.exe
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dejd83\\Debug\\cmTC_3cf9d.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-dejd83/Debug/cmTC_3cf9d.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-dejd83/Debug/cmTC_3cf9d.lib"   /machine:x64 cmTC_3cf9d.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_3cf9d.vcxproj -> D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dejd83\\Debug\\cmTC_3cf9d.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4c13p\\Debug\\cmTC_82b94.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_82b94.dir\\Debug\\cmTC_82b94.tlog\\cmTC_82b94.write.1u.tlog" "cmTC_82b94.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dejd83\\Debug\\cmTC_3cf9d.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_3cf9d.dir\\Debug\\cmTC_3cf9d.tlog\\cmTC_3cf9d.write.1u.tlog" "cmTC_3cf9d.dir\\Debug\\vcpkg.applocal.log"
           'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
           鎴栨壒澶勭悊鏂囦欢銆?
-          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4c13p\\Debug\\cmTC_82b94.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_82b94.dir\\Debug\\cmTC_82b94.tlog\\cmTC_82b94.write.1u.tlog" "cmTC_82b94.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4c13p\\Debug\\cmTC_82b94.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_82b94.dir\\Debug\\cmTC_82b94.tlog\\cmTC_82b94.write.1u.tlog" "cmTC_82b94.dir\\Debug\\vcpkg.applocal.log"
+          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dejd83\\Debug\\cmTC_3cf9d.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_3cf9d.dir\\Debug\\cmTC_3cf9d.tlog\\cmTC_3cf9d.write.1u.tlog" "cmTC_3cf9d.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dejd83\\Debug\\cmTC_3cf9d.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_3cf9d.dir\\Debug\\cmTC_3cf9d.tlog\\cmTC_3cf9d.write.1u.tlog" "cmTC_3cf9d.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_82b94.dir\\Debug\\cmTC_82b94.tlog\\unsuccessfulbuild鈥濄€?
-          姝ｅ湪瀵光€渃mTC_82b94.dir\\Debug\\cmTC_82b94.tlog\\cmTC_82b94.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4c13p\\cmTC_82b94.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_3cf9d.dir\\Debug\\cmTC_3cf9d.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_3cf9d.dir\\Debug\\cmTC_3cf9d.tlog\\cmTC_3cf9d.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dejd83\\cmTC_3cf9d.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
         
         宸叉垚鍔熺敓鎴愩€?
             0 涓鍛?
             0 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.95
+        宸茬敤鏃堕棿 00:00:01.10
         
       exitCode: 0
   -
@@ -367,8 +367,8 @@ events:
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-82e7n4"
-      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-82e7n4"
+      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-1w38d4"
+      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-1w38d4"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/Llvm/x64/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
@@ -378,45 +378,45 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-82e7n4'
+        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-1w38d4'
         
-        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fab3c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a9d7f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
-        鐢熸垚鍚姩鏃堕棿涓?2025-10-13 12:39:51銆?
+        鐢熸垚鍚姩鏃堕棿涓?2025-10-13 14:10:13銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-82e7n4\\cmTC_fab3c.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1w38d4\\cmTC_a9d7f.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_fab3c.dir\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a9d7f.dir\\Debug\\鈥濄€?
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-82e7n4\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_fab3c.dir\\Debug\\cmTC_fab3c.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1w38d4\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a9d7f.dir\\Debug\\cmTC_a9d7f.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_fab3c.dir\\Debug\\cmTC_fab3c.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_fab3c.dir\\Debug\\cmTC_fab3c.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_a9d7f.dir\\Debug\\cmTC_a9d7f.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_a9d7f.dir\\Debug\\cmTC_a9d7f.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /MDd /GS /fp:precise /GR /std:c++14 /Fo"cmTC_fab3c.dir\\Debug\\\\" /Gd /TP --target=amd64-pc-windows-msvc  "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-82e7n4\\feature_tests.cxx"
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /MDd /GS /fp:precise /GR /std:c++14 /Fo"cmTC_a9d7f.dir\\Debug\\\\" /Gd /TP --target=amd64-pc-windows-msvc  "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1w38d4\\feature_tests.cxx"
         Link:
-          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-82e7n4\\Debug\\cmTC_fab3c.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-82e7n4/Debug/cmTC_fab3c.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-82e7n4/Debug/cmTC_fab3c.lib"   /machine:x64 cmTC_fab3c.dir\\Debug\\feature_tests.obj
-          cmTC_fab3c.vcxproj -> D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-82e7n4\\Debug\\cmTC_fab3c.exe
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1w38d4\\Debug\\cmTC_a9d7f.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-1w38d4/Debug/cmTC_a9d7f.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-1w38d4/Debug/cmTC_a9d7f.lib"   /machine:x64 cmTC_a9d7f.dir\\Debug\\feature_tests.obj
+          cmTC_a9d7f.vcxproj -> D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1w38d4\\Debug\\cmTC_a9d7f.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-82e7n4\\Debug\\cmTC_fab3c.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_fab3c.dir\\Debug\\cmTC_fab3c.tlog\\cmTC_fab3c.write.1u.tlog" "cmTC_fab3c.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1w38d4\\Debug\\cmTC_a9d7f.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_a9d7f.dir\\Debug\\cmTC_a9d7f.tlog\\cmTC_a9d7f.write.1u.tlog" "cmTC_a9d7f.dir\\Debug\\vcpkg.applocal.log"
           'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
           鎴栨壒澶勭悊鏂囦欢銆?
-          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-82e7n4\\Debug\\cmTC_fab3c.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_fab3c.dir\\Debug\\cmTC_fab3c.tlog\\cmTC_fab3c.write.1u.tlog" "cmTC_fab3c.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-82e7n4\\Debug\\cmTC_fab3c.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_fab3c.dir\\Debug\\cmTC_fab3c.tlog\\cmTC_fab3c.write.1u.tlog" "cmTC_fab3c.dir\\Debug\\vcpkg.applocal.log"
+          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1w38d4\\Debug\\cmTC_a9d7f.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_a9d7f.dir\\Debug\\cmTC_a9d7f.tlog\\cmTC_a9d7f.write.1u.tlog" "cmTC_a9d7f.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1w38d4\\Debug\\cmTC_a9d7f.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_a9d7f.dir\\Debug\\cmTC_a9d7f.tlog\\cmTC_a9d7f.write.1u.tlog" "cmTC_a9d7f.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_fab3c.dir\\Debug\\cmTC_fab3c.tlog\\unsuccessfulbuild鈥濄€?
-          姝ｅ湪瀵光€渃mTC_fab3c.dir\\Debug\\cmTC_fab3c.tlog\\cmTC_fab3c.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-82e7n4\\cmTC_fab3c.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_a9d7f.dir\\Debug\\cmTC_a9d7f.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_a9d7f.dir\\Debug\\cmTC_a9d7f.tlog\\cmTC_a9d7f.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1w38d4\\cmTC_a9d7f.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
         
         宸叉垚鍔熺敓鎴愩€?
             0 涓鍛?
             0 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.97
+        宸茬敤鏃堕棿 00:00:01.11
         
       exitCode: 0
   -
@@ -431,8 +431,8 @@ events:
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-l85i2g"
-      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-l85i2g"
+      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-qj0dge"
+      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-qj0dge"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/Llvm/x64/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
@@ -442,45 +442,45 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-l85i2g'
+        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-qj0dge'
         
-        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6b0eb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e9ac9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
-        鐢熸垚鍚姩鏃堕棿涓?2025-10-13 12:39:52銆?
+        鐢熸垚鍚姩鏃堕棿涓?2025-10-13 14:10:15銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l85i2g\\cmTC_6b0eb.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qj0dge\\cmTC_e9ac9.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_6b0eb.dir\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_e9ac9.dir\\Debug\\鈥濄€?
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l85i2g\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_6b0eb.dir\\Debug\\cmTC_6b0eb.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qj0dge\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_e9ac9.dir\\Debug\\cmTC_e9ac9.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_6b0eb.dir\\Debug\\cmTC_6b0eb.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_6b0eb.dir\\Debug\\cmTC_6b0eb.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_e9ac9.dir\\Debug\\cmTC_e9ac9.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_e9ac9.dir\\Debug\\cmTC_e9ac9.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /MDd /GS /fp:precise /GR /Fo"cmTC_6b0eb.dir\\Debug\\\\" /Gd /TP --target=amd64-pc-windows-msvc  "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l85i2g\\feature_tests.cxx"
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /MDd /GS /fp:precise /GR /Fo"cmTC_e9ac9.dir\\Debug\\\\" /Gd /TP --target=amd64-pc-windows-msvc  "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qj0dge\\feature_tests.cxx"
         Link:
-          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l85i2g\\Debug\\cmTC_6b0eb.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-l85i2g/Debug/cmTC_6b0eb.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-l85i2g/Debug/cmTC_6b0eb.lib"   /machine:x64 cmTC_6b0eb.dir\\Debug\\feature_tests.obj
-          cmTC_6b0eb.vcxproj -> D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l85i2g\\Debug\\cmTC_6b0eb.exe
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qj0dge\\Debug\\cmTC_e9ac9.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-qj0dge/Debug/cmTC_e9ac9.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-qj0dge/Debug/cmTC_e9ac9.lib"   /machine:x64 cmTC_e9ac9.dir\\Debug\\feature_tests.obj
+          cmTC_e9ac9.vcxproj -> D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qj0dge\\Debug\\cmTC_e9ac9.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l85i2g\\Debug\\cmTC_6b0eb.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_6b0eb.dir\\Debug\\cmTC_6b0eb.tlog\\cmTC_6b0eb.write.1u.tlog" "cmTC_6b0eb.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qj0dge\\Debug\\cmTC_e9ac9.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_e9ac9.dir\\Debug\\cmTC_e9ac9.tlog\\cmTC_e9ac9.write.1u.tlog" "cmTC_e9ac9.dir\\Debug\\vcpkg.applocal.log"
           'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
           鎴栨壒澶勭悊鏂囦欢銆?
-          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l85i2g\\Debug\\cmTC_6b0eb.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_6b0eb.dir\\Debug\\cmTC_6b0eb.tlog\\cmTC_6b0eb.write.1u.tlog" "cmTC_6b0eb.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l85i2g\\Debug\\cmTC_6b0eb.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_6b0eb.dir\\Debug\\cmTC_6b0eb.tlog\\cmTC_6b0eb.write.1u.tlog" "cmTC_6b0eb.dir\\Debug\\vcpkg.applocal.log"
+          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qj0dge\\Debug\\cmTC_e9ac9.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_e9ac9.dir\\Debug\\cmTC_e9ac9.tlog\\cmTC_e9ac9.write.1u.tlog" "cmTC_e9ac9.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qj0dge\\Debug\\cmTC_e9ac9.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_e9ac9.dir\\Debug\\cmTC_e9ac9.tlog\\cmTC_e9ac9.write.1u.tlog" "cmTC_e9ac9.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_6b0eb.dir\\Debug\\cmTC_6b0eb.tlog\\unsuccessfulbuild鈥濄€?
-          姝ｅ湪瀵光€渃mTC_6b0eb.dir\\Debug\\cmTC_6b0eb.tlog\\cmTC_6b0eb.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l85i2g\\cmTC_6b0eb.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_e9ac9.dir\\Debug\\cmTC_e9ac9.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_e9ac9.dir\\Debug\\cmTC_e9ac9.tlog\\cmTC_e9ac9.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qj0dge\\cmTC_e9ac9.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
         
         宸叉垚鍔熺敓鎴愩€?
             0 涓鍛?
             0 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.93
+        宸茬敤鏃堕棿 00:00:01.10
         
       exitCode: 0
 ...

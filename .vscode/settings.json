@@ -2,6 +2,7 @@
     "files.associations": {
         "*.dbclient-js": "javascript",
         "deque": "cpp",
-        "*.inc": "cpp"
+        "*.inc": "cpp",
+        "type_traits": "cpp"
     }
 }

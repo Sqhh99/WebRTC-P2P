@@ -7,6 +7,9 @@
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\conductor.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\capturer_track_source.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\defaults.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -14,6 +17,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\peer_connection_client.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test_video_capturer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
