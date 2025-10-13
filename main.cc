@@ -10,12 +10,6 @@
 
 // clang-format off
 // clang formating would change include order.
-#ifndef NOMINMAX
-#define NOMINMAX
-#endif
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
 #include <windows.h>
 #include <shellapi.h>  // must come after windows.h
 // clang-format on
@@ -98,17 +92,9 @@ int PASCAL wWinMain(HINSTANCE instance,
 
   absl::ParseCommandLine(argc, argv);
 
-  // Create environment with field trials
-  webrtc::FieldTrialsView* field_trials = nullptr;
-  std::unique_ptr<webrtc::FieldTrials> owned_field_trials;
-  
-  std::string field_trials_string = absl::GetFlag(FLAGS_force_fieldtrials);
-  if (!field_trials_string.empty()) {
-    owned_field_trials = std::make_unique<webrtc::FieldTrials>(field_trials_string);
-    field_trials = owned_field_trials.get();
-  }
-  
-  webrtc::Environment env = webrtc::CreateEnvironment(field_trials);
+  webrtc::Environment env =
+      webrtc::CreateEnvironment(std::make_unique<webrtc::FieldTrials>(
+          absl::GetFlag(FLAGS_force_fieldtrials)));
 
   // Abort if the user specifies a port that is outside the allowed
   // range [1, 65535].

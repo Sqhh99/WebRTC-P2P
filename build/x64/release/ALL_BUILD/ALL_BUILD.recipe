@@ -2,13 +2,13 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\workspace\cpp-workspace\peerconnection\client\build\x64\release\ZERO_CHECK</FullPath>
+      <FullPath>D:\workspace\cpp-workspace\peerconnection\client\build\x64\Release\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>D:\workspace\cpp-workspace\peerconnection\client\build\Release\peerconnection_client.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\workspace\cpp-workspace\peerconnection\client\build\x64\release\ALL_BUILD</FullPath>
+      <FullPath>D:\workspace\cpp-workspace\peerconnection\client\build\x64\Release\ALL_BUILD</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

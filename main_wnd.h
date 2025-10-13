@@ -11,13 +11,6 @@
 #ifndef EXAMPLES_PEERCONNECTION_CLIENT_MAIN_WND_H_
 #define EXAMPLES_PEERCONNECTION_CLIENT_MAIN_WND_H_
 
-#ifndef NOMINMAX
-#define NOMINMAX
-#endif
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
-
 #include <map>
 #include <memory>
 #include <string>

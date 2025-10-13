@@ -80,11 +80,16 @@ link_directories(
 add_executable(peerconnection_client WIN32
     main.cc
     conductor.cc
-    capturer_track_source.cc
     defaults.cc
     main_wnd.cc
     peer_connection_client.cc
-    test_video_capturer.cc
+    test_impl.cc
+    test/platform_video_capturer.cc
+    test/vcm_capturer.cc
+    test/test_video_capturer.cc
+    test/frame_generator.cc
+    test/frame_generator_capturer.cc
+    test/frame_utils.cc
 )
 
 # WebRTC 的必需库

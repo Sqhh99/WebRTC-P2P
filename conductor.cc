@@ -50,7 +50,6 @@
 #include "examples/peerconnection/client/defaults.h"
 #include "examples/peerconnection/client/main_wnd.h"
 #include "examples/peerconnection/client/peer_connection_client.h"
-#include "capturer_track_source.h"
 #include "json/reader.h"
 #include "json/value.h"
 #include "json/writer.h"
@@ -61,33 +60,14 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/strings/json.h"
 #include "rtc_base/thread.h"
+#include "system_wrappers/include/clock.h"
+#include "test/frame_generator_capturer.h"
+#include "test/platform_video_capturer.h"
+#include "test/test_video_capturer.h"
 
-// 在 conductor.cc 中添加这些辅助函数
-namespace {
-
-bool GetStringFromJsonObject(const Json::Value& json,
-                             const std::string& key,
-                             std::string* value) {
-  if (!json.isMember(key) || !json[key].isString()) {
-    return false;
-  }
-  *value = json[key].asString();
-  return true;
-}
-
-bool GetIntFromJsonObject(const Json::Value& json,
-                         const std::string& key,
-                         int* value) {
-  if (!json.isMember(key) || !json[key].isInt()) {
-    return false;
-  }
-  *value = json[key].asInt();
-  return true;
-}
-
-}  // namespace
 
 namespace {
+using webrtc::test::TestVideoCapturer;
 
 // Names used for a IceCandidate JSON object.
 const char kCandidateSdpMidName[] = "sdpMid";
@@ -109,6 +89,55 @@ class DummySetSessionDescriptionObserver
     RTC_LOG(LS_INFO) << __FUNCTION__ << " " << ToString(error.type()) << ": "
                      << error.message();
   }
+};
+
+std::unique_ptr<TestVideoCapturer> CreateCapturer(
+    webrtc::TaskQueueFactory& task_queue_factory) {
+  const size_t kWidth = 640;
+  const size_t kHeight = 480;
+  const size_t kFps = 30;
+  std::unique_ptr<webrtc::VideoCaptureModule::DeviceInfo> info(
+      webrtc::VideoCaptureFactory::CreateDeviceInfo());
+  if (!info) {
+    return nullptr;
+  }
+  int num_devices = info->NumberOfDevices();
+  for (int i = 0; i < num_devices; ++i) {
+    std::unique_ptr<TestVideoCapturer> capturer =
+        webrtc::test::CreateVideoCapturer(kWidth, kHeight, kFps, i);
+    if (capturer) {
+      return capturer;
+    }
+  }
+  auto frame_generator = webrtc::test::CreateSquareFrameGenerator(
+      kWidth, kHeight, std::nullopt, std::nullopt);
+  return std::make_unique<webrtc::test::FrameGeneratorCapturer>(
+      webrtc::Clock::GetRealTimeClock(), std::move(frame_generator), kFps,
+      task_queue_factory);
+}
+class CapturerTrackSource : public webrtc::VideoTrackSource {
+ public:
+  static webrtc::scoped_refptr<CapturerTrackSource> Create(
+      webrtc::TaskQueueFactory& task_queue_factory) {
+    std::unique_ptr<TestVideoCapturer> capturer =
+        CreateCapturer(task_queue_factory);
+    if (capturer) {
+      capturer->Start();
+      return webrtc::make_ref_counted<CapturerTrackSource>(std::move(capturer));
+    }
+    return nullptr;
+  }
+
+ protected:
+  explicit CapturerTrackSource(std::unique_ptr<TestVideoCapturer> capturer)
+      : VideoTrackSource(/*remote=*/false), capturer_(std::move(capturer)) {}
+
+ private:
+  webrtc::VideoSourceInterface<webrtc::VideoFrame>* source() override {
+    return capturer_.get();
+  }
+
+  std::unique_ptr<TestVideoCapturer> capturer_;
 };
 
 }  // namespace
@@ -321,6 +350,7 @@ void Conductor::OnPeerDisconnected(int id) {
 void Conductor::OnMessageFromPeer(int peer_id, const std::string& message) {
   RTC_DCHECK(peer_id_ == peer_id || peer_id_ == -1);
   RTC_DCHECK(!message.empty());
+
   if (!peer_connection_) {
     RTC_DCHECK(peer_id_ == -1);
     peer_id_ = peer_id;
@@ -350,7 +380,7 @@ void Conductor::OnMessageFromPeer(int peer_id, const std::string& message) {
   std::string type_str;
   std::string json_object;
 
-  GetStringFromJsonObject(jmessage, kSessionDescriptionTypeName,
+  webrtc::GetStringFromJsonObject(jmessage, kSessionDescriptionTypeName,
                                   &type_str);
   if (!type_str.empty()) {
     if (type_str == "offer-loopback") {
@@ -371,7 +401,7 @@ void Conductor::OnMessageFromPeer(int peer_id, const std::string& message) {
     }
     webrtc::SdpType type = *type_maybe;
     std::string sdp;
-    if (!GetStringFromJsonObject(jmessage, kSessionDescriptionSdpName,
+    if (!webrtc::GetStringFromJsonObject(jmessage, kSessionDescriptionSdpName,
                                          &sdp)) {
       RTC_LOG(LS_WARNING)
           << "Can't parse received session description message.";
@@ -399,11 +429,11 @@ void Conductor::OnMessageFromPeer(int peer_id, const std::string& message) {
     std::string sdp_mid;
     int sdp_mlineindex = 0;
     std::string sdp;
-    if (!GetStringFromJsonObject(jmessage, kCandidateSdpMidName,
+    if (!webrtc::GetStringFromJsonObject(jmessage, kCandidateSdpMidName,
                                          &sdp_mid) ||
-        !GetIntFromJsonObject(jmessage, kCandidateSdpMlineIndexName,
+        !webrtc::GetIntFromJsonObject(jmessage, kCandidateSdpMlineIndexName,
                                       &sdp_mlineindex) ||
-        !GetStringFromJsonObject(jmessage, kCandidateSdpName, &sdp)) {
+        !webrtc::GetStringFromJsonObject(jmessage, kCandidateSdpName, &sdp)) {
       RTC_LOG(LS_WARNING) << "Can't parse received message.";
       return;
     }
@@ -443,9 +473,11 @@ void Conductor::StartLogin(const std::string& server, int port) {
     return;
   server_ = server;
   // sqhh99's mark -------------
-
+  // #if CLIENT_1
     client_->Connect(server, port, "test1");
-
+  // #else
+  //   client_->Connect(server, port, "test2");
+  // #endif
   //client_->Connect(server, port, GetPeerName());
   //  sqhh99's mark -------------
 }
@@ -491,7 +523,7 @@ void Conductor::AddTracks() {
   }
 
   webrtc::scoped_refptr<CapturerTrackSource> video_device =
-      CapturerTrackSource::Create(nullptr);
+      CapturerTrackSource::Create(env_.task_queue_factory());
   if (video_device) {
     webrtc::scoped_refptr<webrtc::VideoTrackInterface> video_track_(
         peer_connection_factory_->CreateVideoTrack(video_device, kVideoLabel));

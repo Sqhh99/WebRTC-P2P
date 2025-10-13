@@ -330,11 +330,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\main.cc" />
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\conductor.cc" />
-    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\capturer_track_source.cc" />
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\defaults.cc" />
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\main_wnd.cc" />
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\peer_connection_client.cc" />
-    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test_video_capturer.cc" />
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test_impl.cc" />
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\platform_video_capturer.cc" />
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\vcm_capturer.cc" />
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\test_video_capturer.cc" />
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\frame_generator.cc" />
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\frame_generator_capturer.cc" />
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\frame_utils.cc" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
