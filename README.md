@@ -20,11 +20,14 @@ peerconnection_client/
 │   ├── main_wnd.cc
 │   ├── peer_connection_client.cc
 │   └── test_impl.cc
-├── test/                   # WebRTC 测试相关代码
+├── test/                   # WebRTC 测试支持代码 (精简版)
 │   ├── frame_generator.cc
 │   ├── frame_generator_capturer.cc
 │   ├── platform_video_capturer.cc
-│   └── ... (其他测试文件)
+│   ├── test_video_capturer.cc
+│   ├── vcm_capturer.cc
+│   ├── frame_utils.cc
+│   └── 对应的头文件...
 ├── build/                  # 构建输出目录 (已忽略)
 └── linux/                  # Linux 特定代码
 ```
