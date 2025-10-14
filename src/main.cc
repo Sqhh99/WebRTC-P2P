@@ -27,16 +27,19 @@
 #include "api/environment/environment_factory.h"
 #include "api/field_trials.h"
 #include "api/make_ref_counted.h"
-#include "examples/peerconnection/client/conductor.h"
-#include "examples/peerconnection/client/flag_defs.h"
-#include "examples/peerconnection/client/main_wnd.h"
-#include "examples/peerconnection/client/peer_connection_client.h"
+#include "conductor.h"
+#include "flag_defs.h"
+#include "mainwindow.h"
+#include "peer_connection_client.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/physical_socket_server.h"
 #include "rtc_base/ssl_adapter.h"
 #include "rtc_base/string_utils.h"  // For ToUtf8
 #include "rtc_base/thread.h"
 #include "rtc_base/win32_socket_init.h"
+
+#include <QApplication>
+#include <QTimer>
 
 namespace {
 // A helper class to translate Windows command line arguments into UTF8,
@@ -78,17 +81,12 @@ WindowsCommandLineArguments::WindowsCommandLineArguments() {
 }
 
 }  // namespace
-int PASCAL wWinMain(HINSTANCE instance,
-                    HINSTANCE prev_instance,
-                    wchar_t* cmd_line,
-                    int cmd_show) {
+
+// Use standard main entry point since Qt provides its own wWinMain
+int main(int argc, char* argv[]) {
   webrtc::WinsockInitializer winsock_init;
   webrtc::PhysicalSocketServer ss;
   webrtc::AutoSocketServerThread main_thread(&ss);
-
-  WindowsCommandLineArguments win_args;
-  int argc = win_args.argc();
-  char** argv = win_args.argv();
 
   absl::ParseCommandLine(argc, argv);
 
@@ -103,10 +101,14 @@ int PASCAL wWinMain(HINSTANCE instance,
     return -1;
   }
 
+  // Initialize Qt Application
+  QApplication app(argc, argv);
+
   // sqhh99's mark -------------
   //const std::string server = absl::GetFlag(FLAGS_server);
   const std::string server = "127.0.0.1";
   // sqhh99's mark -------------
+  
   MainWnd wnd(server.c_str(), absl::GetFlag(FLAGS_port),
               absl::GetFlag(FLAGS_autoconnect), absl::GetFlag(FLAGS_autocall));
   if (!wnd.Create()) {
@@ -114,30 +116,26 @@ int PASCAL wWinMain(HINSTANCE instance,
     return -1;
   }
 
+  wnd.show();
+
   webrtc::InitializeSSL();
   PeerConnectionClient client;
   auto conductor = webrtc::make_ref_counted<Conductor>(env, &client, &wnd);
 
-  // Main loop.
-  MSG msg;
-  BOOL gm;
-  while ((gm = ::GetMessage(&msg, NULL, 0, 0)) != 0 && gm != -1) {
-    if (!wnd.PreTranslateMessage(&msg)) {
+  // Use QTimer to process WebRTC messages
+  QTimer timer;
+  QObject::connect(&timer, &QTimer::timeout, []() {
+    MSG msg;
+    while (::PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
       ::TranslateMessage(&msg);
       ::DispatchMessage(&msg);
     }
-  }
+  });
+  timer.start(10);  // Process messages every 10ms
 
-  if (conductor->connection_active() || client.is_connected()) {
-    while ((conductor->connection_active() || client.is_connected()) &&
-           (gm = ::GetMessage(&msg, NULL, 0, 0)) != 0 && gm != -1) {
-      if (!wnd.PreTranslateMessage(&msg)) {
-        ::TranslateMessage(&msg);
-        ::DispatchMessage(&msg);
-      }
-    }
-  }
+  // Run Qt event loop
+  int result = app.exec();
 
   webrtc::CleanupSSL();
-  return 0;
+  return result;
 }

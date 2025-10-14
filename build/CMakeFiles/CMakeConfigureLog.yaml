@@ -484,3 +484,263 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:119 (include)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-8dk512"
+      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-8dk512"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/Llvm/x64/bin/clang-scan-deps.exe"
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6;D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-8dk512'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8cd56.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
+        鐢熸垚鍚姩鏃堕棿涓?2025-10-15 0:14:26銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8dk512\\cmTC_8cd56.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_8cd56.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8dk512\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_8cd56.dir\\Debug\\cmTC_8cd56.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_8cd56.dir\\Debug\\cmTC_8cd56.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_8cd56.dir\\Debug\\cmTC_8cd56.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Fo"cmTC_8cd56.dir\\Debug\\\\" /Gd /TC --target=amd64-pc-windows-msvc  "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8dk512\\src.c"
+        D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8dk512\\src.c(1,10): fatal  error : 'pthread.h' file not found [D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8dk512\\cmTC_8cd56.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8dk512\\cmTC_8cd56.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        
+        鐢熸垚澶辫触銆?
+        
+        鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8dk512\\cmTC_8cd56.vcxproj鈥?榛樿鐩爣) (1) ->
+        (ClCompile 鐩爣) -> 
+          D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8dk512\\src.c(1,10): fatal  error : 'pthread.h' file not found [D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8dk512\\cmTC_8cd56.vcxproj]
+        
+            0 涓鍛?
+            1 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.68
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckLibraryExists.cmake:112 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:119 (include)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-6qfcbe"
+      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-6qfcbe"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/Llvm/x64/bin/clang-scan-deps.exe"
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6;D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-6qfcbe'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3cab3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
+        鐢熸垚鍚姩鏃堕棿涓?2025-10-15 0:14:27銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6qfcbe\\cmTC_3cab3.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_3cab3.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6qfcbe\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_3cab3.dir\\Debug\\cmTC_3cab3.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_3cab3.dir\\Debug\\cmTC_3cab3.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_3cab3.dir\\Debug\\cmTC_3cab3.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Fo"cmTC_3cab3.dir\\Debug\\\\" /Gd /TC --target=amd64-pc-windows-msvc  "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6qfcbe\\CheckFunctionExists.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6qfcbe\\Debug\\cmTC_3cab3.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-6qfcbe/Debug/cmTC_3cab3.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-6qfcbe/Debug/cmTC_3cab3.lib"   /machine:x64 cmTC_3cab3.dir\\Debug\\CheckFunctionExists.obj
+        lld-link : error : could not open 'pthreads.lib': no such file or directory [D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6qfcbe\\cmTC_3cab3.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6qfcbe\\cmTC_3cab3.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        
+        鐢熸垚澶辫触銆?
+        
+        鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6qfcbe\\cmTC_3cab3.vcxproj鈥?榛樿鐩爣) (1) ->
+        (Link 鐩爣) -> 
+          lld-link : error : could not open 'pthreads.lib': no such file or directory [D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6qfcbe\\cmTC_3cab3.vcxproj]
+        
+            0 涓鍛?
+            1 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.59
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckLibraryExists.cmake:112 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:119 (include)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-m2ea6k"
+      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-m2ea6k"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/Llvm/x64/bin/clang-scan-deps.exe"
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6;D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-m2ea6k'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_aadfa.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
+        鐢熸垚鍚姩鏃堕棿涓?2025-10-15 0:14:28銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m2ea6k\\cmTC_aadfa.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_aadfa.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m2ea6k\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_aadfa.dir\\Debug\\cmTC_aadfa.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_aadfa.dir\\Debug\\cmTC_aadfa.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_aadfa.dir\\Debug\\cmTC_aadfa.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Fo"cmTC_aadfa.dir\\Debug\\\\" /Gd /TC --target=amd64-pc-windows-msvc  "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m2ea6k\\CheckFunctionExists.c"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m2ea6k\\Debug\\cmTC_aadfa.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-m2ea6k/Debug/cmTC_aadfa.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-m2ea6k/Debug/cmTC_aadfa.lib"   /machine:x64 cmTC_aadfa.dir\\Debug\\CheckFunctionExists.obj
+        lld-link : error : could not open 'pthread.lib': no such file or directory [D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m2ea6k\\cmTC_aadfa.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m2ea6k\\cmTC_aadfa.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        
+        鐢熸垚澶辫触銆?
+        
+        鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m2ea6k\\cmTC_aadfa.vcxproj鈥?榛樿鐩爣) (1) ->
+        (Link 鐩爣) -> 
+          lld-link : error : could not open 'pthread.lib': no such file or directory [D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m2ea6k\\cmTC_aadfa.vcxproj]
+        
+            0 涓鍛?
+            1 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.62
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:41 (include)"
+      - "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:164 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-fma7hh"
+      binary: "D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-fma7hh"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/Llvm/x64/bin/clang-scan-deps.exe"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6;D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-fma7hh'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3ab70.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.23+b0019275e
+        鐢熸垚鍚姩鏃堕棿涓?2025-10-15 0:14:29銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fma7hh\\cmTC_3ab70.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_3ab70.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fma7hh\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_3ab70.dir\\Debug\\cmTC_3ab70.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_3ab70.dir\\Debug\\cmTC_3ab70.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_3ab70.dir\\Debug\\cmTC_3ab70.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Z7 /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /MDd /GS /fp:precise /GR /Fo"cmTC_3ab70.dir\\Debug\\\\" /Gd /TP --target=amd64-pc-windows-msvc  "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fma7hh\\src.cxx"
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\lld-link.exe /OUT:"D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fma7hh\\Debug\\cmTC_3ab70.exe" /INCREMENTAL /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-fma7hh/Debug/cmTC_3ab70.pdb" /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/CMakeScratch/TryCompile-fma7hh/Debug/cmTC_3ab70.lib"   /machine:x64 cmTC_3ab70.dir\\Debug\\src.obj
+          cmTC_3ab70.vcxproj -> D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fma7hh\\Debug\\cmTC_3ab70.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fma7hh\\Debug\\cmTC_3ab70.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_3ab70.dir\\Debug\\cmTC_3ab70.tlog\\cmTC_3ab70.write.1u.tlog" "cmTC_3ab70.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
+          鎴栨壒澶勭悊鏂囦欢銆?
+          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fma7hh\\Debug\\cmTC_3ab70.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_3ab70.dir\\Debug\\cmTC_3ab70.tlog\\cmTC_3ab70.write.1u.tlog" "cmTC_3ab70.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fma7hh\\Debug\\cmTC_3ab70.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_3ab70.dir\\Debug\\cmTC_3ab70.tlog\\cmTC_3ab70.write.1u.tlog" "cmTC_3ab70.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_3ab70.dir\\Debug\\cmTC_3ab70.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_3ab70.dir\\Debug\\cmTC_3ab70.tlog\\cmTC_3ab70.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\workspace\\cpp-workspace\\peerconnection\\client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fma7hh\\cmTC_3ab70.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:02.47
+        
+      exitCode: 0
+...

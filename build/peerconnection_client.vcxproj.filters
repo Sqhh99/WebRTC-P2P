@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\build\peerconnection_client_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -10,7 +13,10 @@
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\defaults.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\main_wnd.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\mainwindow.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\videorenderer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\peer_connection_client.cc">
@@ -37,11 +43,31 @@
     <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\frame_utils.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\build\peerconnection_client_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\build\peerconnection_client_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\build\peerconnection_client_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\workspace\cpp-workspace\peerconnection\client\include\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\workspace\cpp-workspace\peerconnection\client\include\videorenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\workspace\cpp-workspace\peerconnection\client\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4760E8A2-008C-3B0B-8BB7-B3215C9A3AF3}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{FA3DC1DC-750A-3965-870A-070AA7674FE6}</UniqueIdentifier>
     </Filter>

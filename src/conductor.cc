@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "examples/peerconnection/client/conductor.h"
+#include "conductor.h"
 
 #include <cstddef>
 #include <memory>
@@ -47,9 +47,9 @@
 #include "api/video_codecs/video_encoder_factory_template_libvpx_vp8_adapter.h"
 #include "api/video_codecs/video_encoder_factory_template_libvpx_vp9_adapter.h"
 #include "api/video_codecs/video_encoder_factory_template_open_h264_adapter.h"
-#include "examples/peerconnection/client/defaults.h"
-#include "examples/peerconnection/client/main_wnd.h"
-#include "examples/peerconnection/client/peer_connection_client.h"
+#include "defaults.h"
+#include "mainwindow.h"
+#include "peer_connection_client.h"
 #include "json/reader.h"
 #include "json/value.h"
 #include "json/writer.h"

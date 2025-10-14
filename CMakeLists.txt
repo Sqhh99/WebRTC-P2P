@@ -4,6 +4,15 @@ cmake_minimum_required(VERSION 3.15)
 # 项目名称
 project(peerconnection_client)
 
+# Qt 配置
+set(CMAKE_PREFIX_PATH "d:/Qt/6.6.3/msvc2019_64") # Qt Kit Dir
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+# 查找 Qt6 包
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+
 # 设置 C++ 标准为 C++20
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -81,7 +90,8 @@ add_executable(peerconnection_client WIN32
     src/main.cc
     src/conductor.cc
     src/defaults.cc
-    src/main_wnd.cc
+    src/mainwindow.cc
+    src/videorenderer.cc
     src/peer_connection_client.cc
     src/test_impl.cc
     test/platform_video_capturer.cc
@@ -90,6 +100,8 @@ add_executable(peerconnection_client WIN32
     test/frame_generator.cc
     test/frame_generator_capturer.cc
     test/frame_utils.cc
+    include/mainwindow.h
+    include/videorenderer.h
 )
 target_include_directories(peerconnection_client PRIVATE "${CMAKE_SOURCE_DIR}/include")
 # WebRTC 的必需库
@@ -179,6 +191,9 @@ target_link_libraries(peerconnection_client
     ${WEBRTC_EXTRA_LIBS}
     ${ABSEIL_LIBRARIES}
     ${SYSTEM_LIBRARIES}
+    Qt6::Core
+    Qt6::Gui
+    Qt6::Widgets
 )
 
 # 设置链接选项

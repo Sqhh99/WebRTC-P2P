@@ -25,8 +25,8 @@
 #include "api/rtc_error.h"
 #include "api/rtp_receiver_interface.h"
 #include "api/scoped_refptr.h"
-#include "examples/peerconnection/client/main_wnd.h"
-#include "examples/peerconnection/client/peer_connection_client.h"
+#include "mainwindow.h"
+#include "peer_connection_client.h"
 #include "rtc_base/thread.h"
 
 namespace webrtc {
