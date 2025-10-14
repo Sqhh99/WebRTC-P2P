@@ -11,7 +11,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 # 查找 Qt6 包
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets WebSockets)
 
 # 设置 C++ 标准为 C++20
 set(CMAKE_CXX_STANDARD 20)
@@ -86,13 +86,15 @@ link_directories(
 )
 
 # --- 生成目标 (Windows GUI 应用) ---
-add_executable(peerconnection_client WIN32
+add_executable(peerconnection_client
     src/main.cc
     src/conductor.cc
+    src/webrtcengine.cc
     src/defaults.cc
     src/mainwindow.cc
     src/videorenderer.cc
-    src/peer_connection_client.cc
+    src/signalclient.cc
+    src/callmanager.cc
     src/test_impl.cc
     test/platform_video_capturer.cc
     test/vcm_capturer.cc
@@ -102,6 +104,10 @@ add_executable(peerconnection_client WIN32
     test/frame_utils.cc
     include/mainwindow.h
     include/videorenderer.h
+    include/signalclient.h
+    include/callmanager.h
+    include/conductor.h
+    include/webrtcengine.h
 )
 target_include_directories(peerconnection_client PRIVATE "${CMAKE_SOURCE_DIR}/include")
 # WebRTC 的必需库
@@ -194,9 +200,14 @@ target_link_libraries(peerconnection_client
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets
+    Qt6::WebSockets
 )
 
-# 设置链接选项
+# # 设置链接选项
+# set_target_properties(peerconnection_client PROPERTIES
+#     LINK_FLAGS "/SUBSYSTEM:WINDOWS"
+# )
+
 set_target_properties(peerconnection_client PROPERTIES
-    LINK_FLAGS "/SUBSYSTEM:WINDOWS"
+    LINK_FLAGS "/SUBSYSTEM:CONSOLE"
 )

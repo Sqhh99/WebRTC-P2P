@@ -30,7 +30,8 @@
 #include "conductor.h"
 #include "flag_defs.h"
 #include "mainwindow.h"
-#include "peer_connection_client.h"
+#include "signalclient.h"
+#include "callmanager.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/physical_socket_server.h"
 #include "rtc_base/ssl_adapter.h"
@@ -104,23 +105,29 @@ int main(int argc, char* argv[]) {
   // Initialize Qt Application
   QApplication app(argc, argv);
 
-  // sqhh99's mark -------------
-  //const std::string server = absl::GetFlag(FLAGS_server);
-  const std::string server = "127.0.0.1";
-  // sqhh99's mark -------------
+  // Initialize SSL
+  webrtc::InitializeSSL();
+
+  // Create main window
+  MainWnd main_wnd;
+  main_wnd.show();
+
+  // Create conductor
+  auto conductor = std::make_unique<Conductor>(env, &main_wnd);
+  main_wnd.SetConductor(conductor.get());
+
+  // Register conductor as observer
+  SignalClient* signal_client = main_wnd.GetSignalClient();
+  CallManager* call_manager = main_wnd.GetCallManager();
   
-  MainWnd wnd(server.c_str(), absl::GetFlag(FLAGS_port),
-              absl::GetFlag(FLAGS_autoconnect), absl::GetFlag(FLAGS_autocall));
-  if (!wnd.Create()) {
-    RTC_DCHECK_NOTREACHED();
+  signal_client->RegisterObserver(conductor.get());
+  call_manager->RegisterObserver(conductor.get());
+
+  // Initialize conductor
+  if (!conductor->Initialize()) {
+    printf("Failed to initialize conductor\n");
     return -1;
   }
-
-  wnd.show();
-
-  webrtc::InitializeSSL();
-  PeerConnectionClient client;
-  auto conductor = webrtc::make_ref_counted<Conductor>(env, &client, &wnd);
 
   // Use QTimer to process WebRTC messages
   QTimer timer;
@@ -136,6 +143,7 @@ int main(int argc, char* argv[]) {
   // Run Qt event loop
   int result = app.exec();
 
+  // Cleanup
   webrtc::CleanupSSL();
   return result;
 }
