@@ -255,6 +255,13 @@ void Conductor::OnCallAccepted(const std::string& peer_id) {
 
 void Conductor::OnCallRejected(const std::string& peer_id, const std::string& reason) {
   RTC_LOG(LS_INFO) << "Call rejected by: " << peer_id << " reason: " << reason;
+  
+  // 停止视频渲染器
+  QMetaObject::invokeMethod(main_wnd_, [this]() {
+    main_wnd_->StopLocalRenderer();
+    main_wnd_->StopRemoteRenderer();
+  }, Qt::QueuedConnection);
+  
   if (webrtc_engine_) {
     webrtc_engine_->ClosePeerConnection();
   }
@@ -262,6 +269,13 @@ void Conductor::OnCallRejected(const std::string& peer_id, const std::string& re
 
 void Conductor::OnCallCancelled(const std::string& peer_id, const std::string& reason) {
   RTC_LOG(LS_INFO) << "Call cancelled by: " << peer_id << " reason: " << reason;
+  
+  // 停止视频渲染器
+  QMetaObject::invokeMethod(main_wnd_, [this]() {
+    main_wnd_->StopLocalRenderer();
+    main_wnd_->StopRemoteRenderer();
+  }, Qt::QueuedConnection);
+  
   if (webrtc_engine_) {
     webrtc_engine_->ClosePeerConnection();
   }
@@ -269,6 +283,13 @@ void Conductor::OnCallCancelled(const std::string& peer_id, const std::string& r
 
 void Conductor::OnCallEnded(const std::string& peer_id, const std::string& reason) {
   RTC_LOG(LS_INFO) << "Call ended with: " << peer_id << " reason: " << reason;
+  
+  // 停止视频渲染器
+  QMetaObject::invokeMethod(main_wnd_, [this]() {
+    main_wnd_->StopLocalRenderer();
+    main_wnd_->StopRemoteRenderer();
+  }, Qt::QueuedConnection);
+  
   if (webrtc_engine_) {
     webrtc_engine_->ClosePeerConnection();
   }
@@ -276,6 +297,13 @@ void Conductor::OnCallEnded(const std::string& peer_id, const std::string& reaso
 
 void Conductor::OnCallTimeout() {
   RTC_LOG(LS_INFO) << "Call timeout";
+  
+  // 停止视频渲染器
+  QMetaObject::invokeMethod(main_wnd_, [this]() {
+    main_wnd_->StopLocalRenderer();
+    main_wnd_->StopRemoteRenderer();
+  }, Qt::QueuedConnection);
+  
   if (webrtc_engine_) {
     webrtc_engine_->ClosePeerConnection();
   }
@@ -305,6 +333,14 @@ void Conductor::OnNeedCreatePeerConnection(const std::string& peer_id, bool is_c
 
 void Conductor::OnNeedClosePeerConnection() {
   RTC_LOG(LS_INFO) << "Need close peer connection";
+  
+  // 先停止UI层的视频渲染器
+  QMetaObject::invokeMethod(main_wnd_, [this]() {
+    main_wnd_->StopLocalRenderer();
+    main_wnd_->StopRemoteRenderer();
+  }, Qt::QueuedConnection);
+  
+  // 再关闭WebRTC引擎的对等连接
   if (webrtc_engine_) {
     webrtc_engine_->ClosePeerConnection();
   }

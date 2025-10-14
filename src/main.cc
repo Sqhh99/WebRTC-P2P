@@ -143,7 +143,19 @@ int main(int argc, char* argv[]) {
   // Run Qt event loop
   int result = app.exec();
 
-  // Cleanup
+  // Cleanup resources before exit
+  timer.stop();
+  
+  // Shutdown conductor (releases WebRTC resources)
+  if (conductor) {
+    conductor->Shutdown();
+  }
+  
+  // Clear unique_ptr to ensure destructor is called
+  conductor.reset();
+
+  // Cleanup WebRTC SSL
   webrtc::CleanupSSL();
+  
   return result;
 }

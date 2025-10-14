@@ -1,93 +1,93 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\build\peerconnection_client_autogen\mocs_compilation_Debug.cpp">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\build\peerconnection_client_autogen\mocs_compilation_Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\src\main.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\src\conductor.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\conductor.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\src\webrtcengine.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\webrtcengine.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\src\defaults.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\defaults.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\src\mainwindow.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\mainwindow.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\src\videorenderer.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\videorenderer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\src\signalclient.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\signalclient.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\src\callmanager.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\callmanager.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\src\test_impl.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\src\test_impl.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\test\platform_video_capturer.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\platform_video_capturer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\test\vcm_capturer.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\vcm_capturer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\test\test_video_capturer.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\test_video_capturer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\test\frame_generator.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\frame_generator.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\test\frame_generator_capturer.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\frame_generator_capturer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\test\frame_utils.cc">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\test\frame_utils.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\build\peerconnection_client_autogen\mocs_compilation_Release.cpp">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\build\peerconnection_client_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\build\peerconnection_client_autogen\mocs_compilation_MinSizeRel.cpp">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\build\peerconnection_client_autogen\mocs_compilation_MinSizeRel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\workspace\go-workspace\webrtc\client\build\peerconnection_client_autogen\mocs_compilation_RelWithDebInfo.cpp">
+    <ClCompile Include="D:\workspace\cpp-workspace\peerconnection\client\build\peerconnection_client_autogen\mocs_compilation_RelWithDebInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\workspace\go-workspace\webrtc\client\include\mainwindow.h">
+    <ClInclude Include="D:\workspace\cpp-workspace\peerconnection\client\include\mainwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\workspace\go-workspace\webrtc\client\include\videorenderer.h">
+    <ClInclude Include="D:\workspace\cpp-workspace\peerconnection\client\include\videorenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\workspace\go-workspace\webrtc\client\include\signalclient.h">
+    <ClInclude Include="D:\workspace\cpp-workspace\peerconnection\client\include\signalclient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\workspace\go-workspace\webrtc\client\include\callmanager.h">
+    <ClInclude Include="D:\workspace\cpp-workspace\peerconnection\client\include\callmanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\workspace\go-workspace\webrtc\client\include\conductor.h">
+    <ClInclude Include="D:\workspace\cpp-workspace\peerconnection\client\include\conductor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\workspace\go-workspace\webrtc\client\include\webrtcengine.h">
+    <ClInclude Include="D:\workspace\cpp-workspace\peerconnection\client\include\webrtcengine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\workspace\go-workspace\webrtc\client\CMakeLists.txt" />
+    <CustomBuild Include="D:\workspace\cpp-workspace\peerconnection\client\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{439AD649-BFB9-3192-92B1-658548D500E0}</UniqueIdentifier>
+      <UniqueIdentifier>{4760E8A2-008C-3B0B-8BB7-B3215C9A3AF3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{BE9FC612-85C9-3B4A-A02B-E0B616B3C44E}</UniqueIdentifier>
+      <UniqueIdentifier>{FA3DC1DC-750A-3965-870A-070AA7674FE6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

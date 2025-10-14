@@ -1,6 +1,6 @@
-^D:\WORKSPACE\GO-WORKSPACE\WEBRTC\CLIENT\CMAKELISTS.TXT
+^D:\WORKSPACE\CPP-WORKSPACE\PEERCONNECTION\CLIENT\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/workspace/go-workspace/webrtc/client -BD:/workspace/go-workspace/webrtc/client/build --check-stamp-file D:/workspace/go-workspace/webrtc/client/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/workspace/cpp-workspace/peerconnection/client -BD:/workspace/cpp-workspace/peerconnection/client/build --check-stamp-file D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

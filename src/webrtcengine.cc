@@ -113,7 +113,7 @@ std::unique_ptr<TestVideoCapturer> CreateCapturer(
       task_queue_factory);
 }
 
-// 视频轨道源
+// CapturerTrackSource - 视频采集源包装器
 class CapturerTrackSource : public webrtc::VideoTrackSource {
  public:
   static webrtc::scoped_refptr<CapturerTrackSource> Create(
@@ -125,6 +125,16 @@ class CapturerTrackSource : public webrtc::VideoTrackSource {
       return webrtc::make_ref_counted<CapturerTrackSource>(std::move(capturer));
     }
     return nullptr;
+  }
+  
+  ~CapturerTrackSource() override {
+    Stop();
+  }
+  
+  void Stop() {
+    if (capturer_) {
+      capturer_->Stop();
+    }
   }
 
  protected:
@@ -207,7 +217,7 @@ WebRTCEngine::WebRTCEngine(const webrtc::Environment& env)
 }
 
 WebRTCEngine::~WebRTCEngine() {
-  ClosePeerConnection();
+  Shutdown();
 }
 
 void WebRTCEngine::SetObserver(WebRTCEngineObserver* observer) {
@@ -288,9 +298,55 @@ bool WebRTCEngine::CreatePeerConnection() {
 }
 
 void WebRTCEngine::ClosePeerConnection() {
-  peer_connection_ = nullptr;
-  pc_observer_.reset();  // 清理观察者
+  RTC_LOG(LS_INFO) << "Closing peer connection...";
+  
+  // 第一步: 显式停止摄像头采集(最重要!)
+  if (video_source_) {
+    CapturerTrackSource* capturer_source = static_cast<CapturerTrackSource*>(video_source_.get());
+    if (capturer_source) {
+      capturer_source->Stop();
+      RTC_LOG(LS_INFO) << "Video capturer stopped";
+    }
+  }
+  
+  // 第二步: 禁用本地媒体轨道
+  if (local_video_track_) {
+    local_video_track_->set_enabled(false);
+    RTC_LOG(LS_INFO) << "Local video track disabled";
+  }
+  
+  if (local_audio_track_) {
+    local_audio_track_->set_enabled(false);
+    RTC_LOG(LS_INFO) << "Local audio track disabled";
+  }
+  
+  // 第三步: 移除 PeerConnection 中的所有 senders (释放对track的引用)
+  if (peer_connection_) {
+    auto senders = peer_connection_->GetSenders();
+    for (const auto& sender : senders) {
+      peer_connection_->RemoveTrackOrError(sender);
+    }
+    RTC_LOG(LS_INFO) << "Removed " << senders.size() << " senders from peer connection";
+    
+    // 关闭连接
+    peer_connection_->Close();
+    peer_connection_ = nullptr;
+    RTC_LOG(LS_INFO) << "Peer connection closed";
+  }
+  
+  // 第四步: 释放本地媒体轨道 (释放对source的引用)
+  local_video_track_ = nullptr;
+  local_audio_track_ = nullptr;
+  
+  // 第五步: 释放 video_source (现在引用计数应该为0,触发析构)
+  video_source_ = nullptr;
+  RTC_LOG(LS_INFO) << "Video source released";
+  
+  // 第六步: 清理观察者和其他资源
+  pc_observer_.reset();
   pending_ice_candidates_.clear();
+  
+  RTC_LOG(LS_INFO) << "Peer connection closed successfully";
 }
 
 bool WebRTCEngine::AddTracks() {
@@ -305,11 +361,10 @@ bool WebRTCEngine::AddTracks() {
   }
 
   // 添加视频轨道
-  auto video_device = CapturerTrackSource::Create(env_.task_queue_factory());
-  if (video_device) {
-    webrtc::scoped_refptr<webrtc::VideoTrackInterface> video_track = 
-        peer_connection_factory_->CreateVideoTrack(video_device, "video_label");
-    auto result_or_error = peer_connection_->AddTrack(video_track, {"stream_id"});
+  video_source_ = CapturerTrackSource::Create(env_.task_queue_factory());
+  if (video_source_) {
+    local_video_track_ = peer_connection_factory_->CreateVideoTrack(video_source_, "video_label");
+    auto result_or_error = peer_connection_->AddTrack(local_video_track_, {"stream_id"});
     
     if (!result_or_error.ok()) {
       RTC_LOG(LS_ERROR) << "Failed to add video track: "
@@ -320,7 +375,7 @@ bool WebRTCEngine::AddTracks() {
       return false;
     } else {
       if (observer_) {
-        observer_->OnLocalVideoTrackAdded(video_track.get());
+        observer_->OnLocalVideoTrackAdded(local_video_track_.get());
       }
     }
   }
@@ -328,8 +383,8 @@ bool WebRTCEngine::AddTracks() {
   // 添加音频轨道
   webrtc::AudioOptions audio_options;
   auto audio_source = peer_connection_factory_->CreateAudioSource(audio_options);
-  auto audio_track = peer_connection_factory_->CreateAudioTrack("audio_label", audio_source.get());
-  auto result_or_error = peer_connection_->AddTrack(audio_track, {"stream_id"});
+  local_audio_track_ = peer_connection_factory_->CreateAudioTrack("audio_label", audio_source.get());
+  auto result_or_error = peer_connection_->AddTrack(local_audio_track_, {"stream_id"});
   
   if (!result_or_error.ok()) {
     RTC_LOG(LS_ERROR) << "Failed to add audio track: "
@@ -465,9 +520,21 @@ bool WebRTCEngine::IsConnected() const {
 }
 
 void WebRTCEngine::Shutdown() {
+  RTC_LOG(LS_INFO) << "Shutting down WebRTC Engine...";
+  
+  // 关闭对等连接
   ClosePeerConnection();
+  
+  // 释放工厂（这会停止所有线程）
   peer_connection_factory_ = nullptr;
-  signaling_thread_ = nullptr;
+  
+  // 停止信令线程
+  if (signaling_thread_) {
+    signaling_thread_->Stop();
+    signaling_thread_ = nullptr;
+  }
+  
+  RTC_LOG(LS_INFO) << "WebRTC Engine shutdown complete";
 }
 
 // ============================================================================

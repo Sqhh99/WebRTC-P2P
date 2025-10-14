@@ -51,9 +51,18 @@ MainWnd::MainWnd(QWidget* parent)
 }
 
 MainWnd::~MainWnd() {
+  // 断开信令连接
   if (signal_client_) {
     signal_client_->Disconnect();
   }
+  
+  // 停止定时器
+  if (stats_timer_) {
+    stats_timer_->stop();
+  }
+  
+  // 注意:不在这里调用 conductor_->Shutdown(),因为会导致头文件循环依赖
+  // Shutdown 应该在 main.cc 的清理代码中调用
 }
 
 void MainWnd::SetConductor(Conductor* conductor) {
@@ -379,6 +388,9 @@ void MainWnd::OnCallButtonClicked() {
 }
 
 void MainWnd::OnHangupButtonClicked() {
+  // 先停止本地视频渲染器
+  StopLocalRenderer();
+  
   call_manager_->EndCall();
   AppendLog("通话已挂断", "info");
 }
@@ -391,13 +403,14 @@ void MainWnd::OnIncomingCall(QString caller_id) {
   QMessageBox msg_box(this);
   msg_box.setWindowTitle("来电");
   msg_box.setText(QString("用户 %1 正在呼叫您").arg(caller_id));
-  msg_box.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-  msg_box.setButtonText(QMessageBox::Yes, "接听");
-  msg_box.setButtonText(QMessageBox::No, "拒绝");
   
-  int result = msg_box.exec();
+  // 使用 addButton 替代已废弃的 setButtonText
+  QPushButton* acceptButton = msg_box.addButton("接听", QMessageBox::YesRole);
+  msg_box.addButton("拒绝", QMessageBox::NoRole);
   
-  if (result == QMessageBox::Yes) {
+  msg_box.exec();
+  
+  if (msg_box.clickedButton() == acceptButton) {
     call_manager_->AcceptCall();
     AppendLog(QString("已接听来自 %1 的呼叫").arg(caller_id), "success");
   } else {
@@ -523,13 +536,22 @@ void MainWnd::ShowInfo(const QString& title, const QString& message) {
 }
 
 void MainWnd::closeEvent(QCloseEvent* event) {
+  // 停止所有视频渲染器
+  StopLocalRenderer();
+  StopRemoteRenderer();
+  
+  // 如果正在通话，先挂断
   if (call_manager_->IsInCall()) {
     call_manager_->EndCall();
   }
   
+  // 断开信令连接
   if (signal_client_->IsConnected()) {
     signal_client_->Disconnect();
   }
+  
+  // 注意: conductor_->Shutdown() 会在 main.cc 的清理代码中调用
+  // 不在这里调用是为了避免头文件循环依赖
   
   event->accept();
 }

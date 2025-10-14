@@ -86,7 +86,7 @@ link_directories(
 )
 
 # --- 生成目标 (Windows GUI 应用) ---
-add_executable(peerconnection_client
+add_executable(peerconnection_client WIN32
     src/main.cc
     src/conductor.cc
     src/webrtcengine.cc
@@ -203,11 +203,11 @@ target_link_libraries(peerconnection_client
     Qt6::WebSockets
 )
 
-# # 设置链接选项
-# set_target_properties(peerconnection_client PROPERTIES
-#     LINK_FLAGS "/SUBSYSTEM:WINDOWS"
-# )
-
+# 设置链接选项
 set_target_properties(peerconnection_client PROPERTIES
-    LINK_FLAGS "/SUBSYSTEM:CONSOLE"
+    LINK_FLAGS "/SUBSYSTEM:WINDOWS"
 )
+
+# set_target_properties(peerconnection_client PROPERTIES
+#     LINK_FLAGS "/SUBSYSTEM:CONSOLE"
+# )

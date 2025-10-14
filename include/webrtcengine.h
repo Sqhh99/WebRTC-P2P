@@ -90,6 +90,11 @@ class WebRTCEngine {
   webrtc::scoped_refptr<webrtc::PeerConnectionInterface> peer_connection_;
   webrtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory_;
   
+  // 媒体轨道和源引用 - 用于显式停止
+  webrtc::scoped_refptr<webrtc::VideoTrackSourceInterface> video_source_;
+  webrtc::scoped_refptr<webrtc::VideoTrackInterface> local_video_track_;
+  webrtc::scoped_refptr<webrtc::AudioTrackInterface> local_audio_track_;
+  
   // 内部观察者对象 - 必须保持存活
   std::unique_ptr<PeerConnectionObserverImpl> pc_observer_;
   

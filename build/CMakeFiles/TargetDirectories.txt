@@ -1,3 +1,3 @@
-D:/workspace/go-workspace/webrtc/client/build/CMakeFiles/peerconnection_client.dir
-D:/workspace/go-workspace/webrtc/client/build/CMakeFiles/ALL_BUILD.dir
-D:/workspace/go-workspace/webrtc/client/build/CMakeFiles/ZERO_CHECK.dir
+D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/peerconnection_client.dir
+D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/ALL_BUILD.dir
+D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/ZERO_CHECK.dir
