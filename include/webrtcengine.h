@@ -7,8 +7,10 @@
 #include <deque>
 #include "api/environment/environment.h"
 #include "api/peer_connection_interface.h"
+#include "api/peer_connection_interface.h"
 #include "api/scoped_refptr.h"
 #include "rtc_base/thread.h"
+#include "signalclient.h"  // 包含 IceServerConfig 定义
 
 // WebRTC引擎观察者接口 - 业务层只需实现这个接口即可
 class WebRTCEngineObserver {
@@ -44,6 +46,9 @@ class WebRTCEngine {
   
   // 设置观察者
   void SetObserver(WebRTCEngineObserver* observer);
+  
+  // 设置 ICE 服务器配置
+  void SetIceServers(const std::vector<IceServerConfig>& ice_servers);
   
   // 初始化
   bool Initialize();
@@ -100,6 +105,7 @@ class WebRTCEngine {
   
   WebRTCEngineObserver* observer_;
   std::deque<webrtc::IceCandidate*> pending_ice_candidates_;
+  std::vector<IceServerConfig> ice_servers_;  // ICE 服务器配置
   
   bool is_creating_offer_;
 };

@@ -264,11 +264,47 @@ void SignalClient::HandleMessage(const QJsonObject& message) {
   QJsonObject payload = message["payload"].toObject();
   
   switch (msg_type) {
-    case SignalMessageType::Registered:
+    case SignalMessageType::Registered: {
       qDebug() << "Client registered successfully";
+      
+      // 解析 ICE 服务器配置
+      if (payload.contains("iceServers")) {
+        QJsonArray ice_servers_array = payload["iceServers"].toArray();
+        ice_servers_.clear();
+        
+        for (const QJsonValue& server_value : ice_servers_array) {
+          QJsonObject server_obj = server_value.toObject();
+          IceServerConfig config;
+          
+          // 解析 URLs
+          QJsonArray urls_array = server_obj["urls"].toArray();
+          for (const QJsonValue& url : urls_array) {
+            config.urls.push_back(url.toString().toStdString());
+          }
+          
+          // 解析用户名和凭据
+          if (server_obj.contains("username")) {
+            config.username = server_obj["username"].toString().toStdString();
+          }
+          if (server_obj.contains("credential")) {
+            config.credential = server_obj["credential"].toString().toStdString();
+          }
+          
+          ice_servers_.push_back(config);
+        }
+        
+        qDebug() << "Received" << ice_servers_.size() << "ICE server configurations";
+        
+        // 通知观察者 ICE 服务器配置已更新
+        if (observer_) {
+          observer_->OnIceServersReceived(ice_servers_);
+        }
+      }
+      
       // 请求客户端列表
       RequestClientList();
       break;
+    }
       
     case SignalMessageType::ClientList: {
       QJsonArray clients = payload["clients"].toArray();

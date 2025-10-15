@@ -224,6 +224,11 @@ void WebRTCEngine::SetObserver(WebRTCEngineObserver* observer) {
   observer_ = observer;
 }
 
+void WebRTCEngine::SetIceServers(const std::vector<IceServerConfig>& ice_servers) {
+  ice_servers_ = ice_servers;
+  RTC_LOG(LS_INFO) << "Updated ICE servers configuration, count: " << ice_servers_.size();
+}
+
 bool WebRTCEngine::Initialize() {
   RTC_DCHECK(!peer_connection_factory_);
   RTC_LOG(LS_INFO) << "Initializing WebRTC Engine...";
@@ -271,9 +276,42 @@ bool WebRTCEngine::CreatePeerConnection() {
   webrtc::PeerConnectionInterface::RTCConfiguration config;
   config.sdp_semantics = webrtc::SdpSemantics::kUnifiedPlan;
   
-  webrtc::PeerConnectionInterface::IceServer stun_server;
-  stun_server.uri = "stun:stun.l.google.com:19302";
-  config.servers.push_back(stun_server);
+  // 使用从信令服务器接收的 ICE 服务器配置，如果没有则使用默认配置
+  if (!ice_servers_.empty()) {
+    RTC_LOG(LS_INFO) << "Using " << ice_servers_.size() << " ICE servers from signaling server";
+    for (const auto& ice_config : ice_servers_) {
+      webrtc::PeerConnectionInterface::IceServer ice_server;
+      ice_server.urls = ice_config.urls;
+      
+      if (!ice_config.username.empty()) {
+        ice_server.username = ice_config.username;
+      }
+      if (!ice_config.credential.empty()) {
+        ice_server.password = ice_config.credential;
+      }
+      
+      config.servers.push_back(ice_server);
+      
+      // 记录服务器信息
+      for (const auto& url : ice_server.urls) {
+        RTC_LOG(LS_INFO) << "  ICE Server: " << url
+                        << (ice_server.username.empty() ? "" : " (with auth)");
+      }
+    }
+  } else {
+    // 如果没有从服务器接收配置，使用默认 STUN 服务器
+    RTC_LOG(LS_WARNING) << "No ICE servers from signaling server, using default STUN";
+    webrtc::PeerConnectionInterface::IceServer stun_server;
+    stun_server.uri = "stun:stun.l.google.com:19302";
+    config.servers.push_back(stun_server);
+  }
+  
+  // ICE 传输策略：all 表示允许使用所有候选（包括 TURN）
+  config.type = webrtc::PeerConnectionInterface::kAll;
+  
+  // 启用 ICE 连续收集模式
+  config.continual_gathering_policy = 
+      webrtc::PeerConnectionInterface::GATHER_CONTINUALLY;
 
   // 创建并保存内部观察者 - 必须保持存活!
   pc_observer_ = std::make_unique<PeerConnectionObserverImpl>(this);

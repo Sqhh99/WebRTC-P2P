@@ -42,6 +42,7 @@ class Conductor : public WebRTCEngineObserver,
   void OnConnected(const std::string& client_id) override;
   void OnDisconnected() override;
   void OnConnectionError(const std::string& error) override;
+  void OnIceServersReceived(const std::vector<IceServerConfig>& ice_servers) override;
   void OnClientListUpdate(const QJsonArray& clients) override;
   void OnUserOffline(const std::string& client_id) override;
   void OnCallRequest(const std::string& from, const QJsonObject& payload) override;
@@ -73,6 +74,7 @@ class Conductor : public WebRTCEngineObserver,
   const webrtc::Environment env_;
   MainWnd* main_wnd_;
   std::unique_ptr<WebRTCEngine> webrtc_engine_;
+  std::vector<IceServerConfig> ice_servers_;  // ICE 服务器配置
 };
 
 #endif

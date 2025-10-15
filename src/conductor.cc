@@ -161,6 +161,29 @@ void Conductor::OnConnectionError(const std::string& error) {
   }, Qt::QueuedConnection);
 }
 
+void Conductor::OnIceServersReceived(const std::vector<IceServerConfig>& ice_servers) {
+  RTC_LOG(LS_INFO) << "Received " << ice_servers.size() << " ICE server configurations";
+  
+  // 保存 ICE 服务器配置
+  ice_servers_ = ice_servers;
+  
+  // 将 ICE 服务器配置传递给 WebRTC 引擎
+  webrtc_engine_->SetIceServers(ice_servers);
+  
+  QMetaObject::invokeMethod(main_wnd_, [this, ice_servers]() {
+    QString log_msg = QString("接收到 %1 个 ICE 服务器配置:").arg(ice_servers.size());
+    for (const auto& server : ice_servers) {
+      for (const auto& url : server.urls) {
+        log_msg += "\n  - " + QString::fromStdString(url);
+        if (!server.username.empty()) {
+          log_msg += " (认证)";
+        }
+      }
+    }
+    main_wnd_->AppendLog(log_msg, "info");
+  }, Qt::QueuedConnection);
+}
+
 void Conductor::OnClientListUpdate(const QJsonArray& clients) {
   RTC_LOG(LS_INFO) << "Client list updated: " << clients.size() << " clients";
   main_wnd_->UpdateClientList(clients);

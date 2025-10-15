@@ -4,9 +4,18 @@
 #include <QObject>
 #include <QWebSocket>
 #include <QJsonObject>
+#include <QJsonArray>
 #include <QTimer>
 #include <memory>
 #include <string>
+#include <vector>
+
+// ICE 服务器配置结构
+struct IceServerConfig {
+  std::vector<std::string> urls;
+  std::string username;
+  std::string credential;
+};
 
 // 信令消息类型
 enum class SignalMessageType {
@@ -33,6 +42,9 @@ class SignalClientObserver {
   virtual void OnConnected(const std::string& client_id) = 0;
   virtual void OnDisconnected() = 0;
   virtual void OnConnectionError(const std::string& error) = 0;
+  
+  // ICE 服务器配置更新
+  virtual void OnIceServersReceived(const std::vector<IceServerConfig>& ice_servers) = 0;
   
   // 客户端列表更新
   virtual void OnClientListUpdate(const QJsonArray& clients) = 0;
@@ -65,6 +77,9 @@ class SignalClient : public QObject {
   
   // 获取客户端ID
   QString GetClientId() const { return client_id_; }
+  
+  // 获取 ICE 服务器配置
+  const std::vector<IceServerConfig>& GetIceServers() const { return ice_servers_; }
   
   // 注册观察者
   void RegisterObserver(SignalClientObserver* observer);
@@ -106,6 +121,7 @@ class SignalClient : public QObject {
   bool manual_disconnect_;
   int reconnect_attempts_;
   std::unique_ptr<QTimer> reconnect_timer_;
+  std::vector<IceServerConfig> ice_servers_;  // ICE 服务器配置
   
   static constexpr int kMaxReconnectAttempts = 5;
 };
