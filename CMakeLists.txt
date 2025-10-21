@@ -88,10 +88,12 @@ link_directories(
 # --- 生成目标 (Windows GUI 应用) ---
 add_executable(peerconnection_client
     src/main.cc
-    src/conductor.cc
+    # 新的重构文件
+    src/call_coordinator.cc
+    src/video_call_window.cc
+    # 其他源文件
     src/webrtcengine.cc
     src/defaults.cc
-    src/mainwindow.cc
     src/videorenderer.cc
     src/signalclient.cc
     src/callmanager.cc
@@ -102,11 +104,14 @@ add_executable(peerconnection_client
     test/frame_generator.cc
     test/frame_generator_capturer.cc
     test/frame_utils.cc
-    include/mainwindow.h
+    # 新的重构文件
+    include/icall_observer.h
+    include/call_coordinator.h
+    include/video_call_window.h
+    # 其他头文件
     include/videorenderer.h
     include/signalclient.h
     include/callmanager.h
-    include/conductor.h
     include/webrtcengine.h
 )
 target_include_directories(peerconnection_client PRIVATE "${CMAKE_SOURCE_DIR}/include")

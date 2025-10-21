@@ -196,10 +196,12 @@ class WebRTCEngine::CreateSessionDescriptionObserverImpl : public webrtc::Create
       : engine_(engine), is_offer_(is_offer) {}
   
   void OnSuccess(webrtc::SessionDescriptionInterface* desc) override {
+    RTC_LOG(LS_INFO) << "=== CreateSessionDescriptionObserver::OnSuccess called, is_offer: " << is_offer_ << " ===";
     engine_->OnSessionDescriptionSuccess(desc, is_offer_);
   }
   
   void OnFailure(webrtc::RTCError error) override {
+    RTC_LOG(LS_ERROR) << "=== CreateSessionDescriptionObserver::OnFailure called: " << error.message() << " ===";
     engine_->OnSessionDescriptionFailure(error.message());
   }
   
@@ -442,6 +444,7 @@ void WebRTCEngine::CreateOffer() {
     return;
   }
 
+  RTC_LOG(LS_INFO) << "=== Creating Offer ===";
   is_creating_offer_ = true;
   webrtc::PeerConnectionInterface::RTCOfferAnswerOptions options;
   options.offer_to_receive_audio = true;
@@ -449,6 +452,7 @@ void WebRTCEngine::CreateOffer() {
   
   auto observer = CreateSessionDescriptionObserverImpl::Create(this, true);
   peer_connection_->CreateOffer(observer.get(), options);
+  RTC_LOG(LS_INFO) << "CreateOffer called on peer_connection";
 }
 
 void WebRTCEngine::CreateAnswer() {
@@ -457,11 +461,13 @@ void WebRTCEngine::CreateAnswer() {
     return;
   }
 
+  RTC_LOG(LS_INFO) << "=== Creating Answer ===";
   is_creating_offer_ = false;
   webrtc::PeerConnectionInterface::RTCOfferAnswerOptions options;
   
   auto observer = CreateSessionDescriptionObserverImpl::Create(this, false);
   peer_connection_->CreateAnswer(observer.get(), options);
+  RTC_LOG(LS_INFO) << "CreateAnswer called on peer_connection";
 }
 
 void WebRTCEngine::SetRemoteOffer(const std::string& sdp) {
@@ -626,6 +632,8 @@ void WebRTCEngine::OnPeerConnectionIceCandidate(const webrtc::IceCandidate* cand
 }
 
 void WebRTCEngine::OnSessionDescriptionSuccess(webrtc::SessionDescriptionInterface* desc, bool is_offer) {
+  RTC_LOG(LS_INFO) << "=== OnSessionDescriptionSuccess called, is_offer: " << is_offer << " ===";
+  
   std::string sdp;
   desc->ToString(&sdp);
 
@@ -636,18 +644,23 @@ void WebRTCEngine::OnSessionDescriptionSuccess(webrtc::SessionDescriptionInterfa
         observer_->OnError(std::string("SetLocalDescription failed: ") + error.message());
       }
     } else {
-      RTC_LOG(LS_INFO) << "SetLocalDescription succeeded";
+      RTC_LOG(LS_INFO) << "SetLocalDescription succeeded, is_offer: " << is_offer;
       
       if (observer_) {
         if (is_offer) {
+          RTC_LOG(LS_INFO) << "Calling observer_->OnOfferCreated()";
           observer_->OnOfferCreated(sdp);
         } else {
+          RTC_LOG(LS_INFO) << "Calling observer_->OnAnswerCreated()";
           observer_->OnAnswerCreated(sdp);
         }
+      } else {
+        RTC_LOG(LS_ERROR) << "observer_ is null!";
       }
     }
   });
 
+  RTC_LOG(LS_INFO) << "Calling SetLocalDescription...";
   peer_connection_->SetLocalDescription(
       std::unique_ptr<webrtc::SessionDescriptionInterface>(desc), observer);
 }

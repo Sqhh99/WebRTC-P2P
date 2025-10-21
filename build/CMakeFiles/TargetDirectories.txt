@@ -1,3 +1,0 @@
-D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/peerconnection_client.dir
-D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/ALL_BUILD.dir
-D:/workspace/cpp-workspace/peerconnection/client/build/CMakeFiles/ZERO_CHECK.dir

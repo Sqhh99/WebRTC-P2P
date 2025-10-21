@@ -65,6 +65,8 @@ void CallManager::CancelCall() {
 }
 
 void CallManager::AcceptCall() {
+  qDebug() << "AcceptCall called, current state:" << static_cast<int>(call_state_);
+  
   if (call_state_ != CallState::Receiving) {
     qWarning() << "Cannot accept: not in receiving state";
     return;

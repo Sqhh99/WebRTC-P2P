@@ -47,8 +47,18 @@ void SignalClient::Connect(const QString& server_url, const QString& client_id) 
   qDebug() << "Connecting to signaling server:" << server_url_;
   qDebug() << "Client ID:" << client_id_;
   
+  // 构建完整的URL,添加uid参数
+  QString full_url = server_url;
+  if (!full_url.contains("?")) {
+    full_url += "?uid=" + client_id_;
+  } else {
+    full_url += "&uid=" + client_id_;
+  }
+  
+  qDebug() << "Full URL with uid:" << full_url;
+  
   manual_disconnect_ = false;
-  websocket_->open(QUrl(server_url_));
+  websocket_->open(QUrl(full_url));
 }
 
 void SignalClient::Disconnect() {
@@ -235,15 +245,22 @@ void SignalClient::OnReconnectTimer() {
 
 void SignalClient::SendMessage(const QJsonObject& message) {
   if (!is_connected_ || websocket_->state() != QAbstractSocket::ConnectedState) {
-    qWarning() << "Cannot send message: not connected";
+    qWarning() << "Cannot send message: not connected, state:" << websocket_->state();
     return;
   }
   
   QJsonDocument doc(message);
   QString json_string = doc.toJson(QJsonDocument::Compact);
   
-  qDebug() << "Sending message:" << message["type"].toString();
-  websocket_->sendTextMessage(json_string);
+  QString msg_type = message["type"].toString();
+  qDebug() << "Sending message:" << msg_type << "length:" << json_string.length() << "bytes";
+  
+  qint64 bytes_written = websocket_->sendTextMessage(json_string);
+  if (bytes_written < 0) {
+    qWarning() << "Failed to send message:" << msg_type;
+  } else {
+    qDebug() << "Message sent successfully:" << msg_type << "(" << bytes_written << "bytes)";
+  }
 }
 
 void SignalClient::HandleMessage(const QJsonObject& message) {
