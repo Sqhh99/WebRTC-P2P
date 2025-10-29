@@ -1,0 +1,14 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\x64-clang-cl-x64",
+      "out\\install\\x64-clang-cl-x64"
+    ]
+  },
+  "ExpandedNodes": [
+    "",
+    "\\src"
+  ],
+  "SelectedNode": "\\CMakeSettings.json",
+  "PreviewInSolutionExplorer": false
+}
