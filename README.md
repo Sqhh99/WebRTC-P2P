@@ -6,6 +6,9 @@
 
 <img width="1500" height="1250" alt="image" src="https://github.com/user-attachments/assets/4982aaeb-5758-4df7-ab94-b98daf179047" />
 
+<img width="2240" height="1340" alt="image" src="https://github.com/user-attachments/assets/813e4c59-490b-487a-8d5e-a9505800ac3d" />
+
+
 ## 功能特性
 
 - ✅ 点对点视频通话
@@ -176,4 +179,5 @@ peerconnection/client/
 - **构建系统**: CMake 3.15+
 - **信令服务器**: Go + WebSocket
 - **Web 前端**: 原生 JavaScript + Bootstrap 5
+
 
