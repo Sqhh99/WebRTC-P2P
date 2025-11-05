@@ -150,7 +150,7 @@ peerconnection/client/
 ### ICE 服务器
 项目配置了以下 STUN/TURN 服务器：
 - Google STUN: `stun:stun.l.google.com:19302`
-- 自定义 TURN: `turn:113.46.159.182:3478`
+- 可自行配置
 
 ## 常见问题
 
@@ -176,3 +176,4 @@ peerconnection/client/
 - **构建系统**: CMake 3.15+
 - **信令服务器**: Go + WebSocket
 - **Web 前端**: 原生 JavaScript + Bootstrap 5
+
