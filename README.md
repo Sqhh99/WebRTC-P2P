@@ -2,6 +2,10 @@
 
 基于 WebRTC M120+ 的跨平台视频通话应用，支持 Qt GUI 和 Web 客户端互通。
 
+<img width="2240" height="1232" alt="image" src="https://github.com/user-attachments/assets/0a9d4d91-5249-4ce3-8594-7ed94a8c83bc" />
+
+<img width="1500" height="1250" alt="image" src="https://github.com/user-attachments/assets/4982aaeb-5758-4df7-ab94-b98daf179047" />
+
 ## 功能特性
 
 - ✅ 点对点视频通话
